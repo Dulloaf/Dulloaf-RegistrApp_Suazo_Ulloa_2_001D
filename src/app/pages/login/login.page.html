@@ -1,0 +1,35 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title style="text-align: center;">RegistrApp</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+
+  
+    <ion-card-content style="padding-bottom: 100px;">
+      <form [formGroup] = "formularioLogin">
+        <div style="display: flex; justify-content: center;">
+          <img style="border-radius: 10%; background-color: goldenrod;" src="/assets/logo-removebg-preview.png">
+        </div>
+        <ion-item style="padding-top: 100px;">
+          <ion-input formControlName="correo" style="text-align: center;" placeholder="UsuarioAlumno@duocuc.cl" ></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input formControlName="password" type="password" style="text-align: center;" placeholder="*********"></ion-input>
+        </ion-item>
+      </form>
+      <br>
+      <ion-button (click) ="Ingresar()" expand="block" fill="solid" shape="round">Ingresar</ion-button>
+      <ion-button [routerLink] = "['/registro']" expand="block" fill="solid" shape="round">Registrate</ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title style="text-align: center; font-size: small;">@RegistrApp Suazo-Ulloa</ion-title>
+  </ion-toolbar>
+</ion-footer>
